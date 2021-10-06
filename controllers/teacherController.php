@@ -1,9 +1,12 @@
 <?php
 
-include ("models/teachers.php");
+include("models/teachers.php");
 
-$ex4 = new Teachers("Thomas", "Chevalier", "ThomasCorp");
+$aTeacher = array(
+    new Teachers("Greg", "Desplaces", "GregCorp"),
+    new Teachers("Cindy", "Poncin", "CindyCorp")
+);
 
-echo $ex4->getFirstName();
-echo $ex4->getLastName();
-echo $ex4->getBusiness();
+Teachers::addTeacher($aTeacher, "Thomas", "Chevalier", "ThomasCorp");
+
+include("views/displayTeacherViews.php");

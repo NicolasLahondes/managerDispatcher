@@ -17,6 +17,11 @@ class Teachers
         $this->business = $business;
     }
 
+    public static function addTeacher(&$arrayToBePushed, $firstname, $lastname, $business)
+    {
+        array_push($arrayToBePushed, new Teachers($firstname, $lastname, $business));
+    }
+
     // All getters
 
     public function getfirstname()

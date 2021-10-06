@@ -17,16 +17,10 @@ class Subjects
         $this->duration = $duration;
     }
 
-    public function getAllSubjects()
+    public static function addSubject(&$arrayToBePushed, $name, $teacher, $duration)
     {
-
-        $aSubjects = array(
-            array('name' => "English", 'teacher' => "Delphine", 'duree' => 20),
-            array('name' => "Angular", 'teacher' => "Thomas", 'duree' => 32)
-        );
-        return $aSubjects;
+        array_push($arrayToBePushed, new Subjects($name, $teacher, $duration));
     }
-
 
     /**
      * Get the value of duration

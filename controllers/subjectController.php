@@ -1,12 +1,12 @@
 <?php
 
 include('models/subjects.php');
-$subjectAssoc = new Subjects('', '', 8);
-$subjectAssoc = $subjectAssoc->getAllSubjects();
 
-$ex2 = new Subjects("Angular", "Thomas", 8);
-echo $ex2->getName();
-echo $ex2->getTeacher();
-echo $ex2->getDuration();
+$aSubjects = array(
+    new Subjects("Angular", "Thomas", 42),
+    new Subjects("English", "Delphine", 56)
+);
+
+Subjects::addSubject($aSubjects, "JS", "Greg", 32);
 
 include('views/displaySubjectsViews.php');

@@ -20,6 +20,10 @@ class Promotions
         $this->endDate = $endDate;
     }
 
+    public static function addPromo(&$arrayToBePushed, $name, $debutDate, $endDate)
+    {
+        array_push($arrayToBePushed, new Promotions($name, $debutDate, $endDate));
+    }
 
     /**
      * Get the value of endDate
